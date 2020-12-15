@@ -22,7 +22,6 @@ class GuiHelper {
          * @param color RGB 0xff0000: red, 0x00ff00: green, 0x0000ff: blue
          */
         @JvmStatic
-        @OnlyIn(Dist.CLIENT)
         fun drawString(text: String, x: Float, y: Float, color: Int) {
             mc.fontRenderer.drawString(MatrixStack(), text, x, y, color)
         }
@@ -34,7 +33,6 @@ class GuiHelper {
          * @param color RGB 0xff0000: red, 0x00ff00: green, 0x0000ff: blue
          */
         @JvmStatic
-        @OnlyIn(Dist.CLIENT)
         fun drawString(text: String, x: Int, y: Int, color: Int) {
             drawString(text, x.toFloat(), y.toFloat(), color)
         }
@@ -48,7 +46,6 @@ class GuiHelper {
          * @param color RGB 0xff0000: red, 0x00ff00: green, 0x0000ff: blue
          */
         @JvmStatic
-        @OnlyIn(Dist.CLIENT)
         fun drawRect(x: Int, y: Int, width: Int, height: Int, color: Int) {
             GlStateManager.disableCull()
             GL11.glColor3f((color ushr 16 and 0xff) / 256f, (color ushr 8 and 0xff) / 256f, (color and 0xff) / 256f)
@@ -64,7 +61,6 @@ class GuiHelper {
          * @param text text
          */
         @JvmStatic
-        @OnlyIn(Dist.CLIENT)
         fun drawItem(itemStack: ItemStack?, x: Int, y: Int, text: String?): Boolean {
             if (
                 itemStack == null
@@ -83,7 +79,6 @@ class GuiHelper {
          * @param y y coord
          */
         @JvmStatic
-        @OnlyIn(Dist.CLIENT)
         fun drawItem(itemStack: ItemStack?, x: Int, y: Int): Boolean {
             return drawItem(itemStack, x, y, null)
         }
