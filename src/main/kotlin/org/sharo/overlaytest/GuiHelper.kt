@@ -5,8 +5,6 @@ import com.mojang.blaze3d.platform.GlStateManager
 import net.minecraft.client.Minecraft
 import net.minecraft.entity.LivingEntity
 import net.minecraft.item.ItemStack
-import net.minecraftforge.api.distmarker.Dist
-import net.minecraftforge.api.distmarker.OnlyIn
 import org.lwjgl.opengl.GL11
 
 class GuiHelper {
